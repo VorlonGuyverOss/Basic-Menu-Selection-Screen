@@ -60,8 +60,8 @@ int main ( int argc, const char *argv[ ] ) {
 
 /*
  *
- *  Another way to create a method in a secure file. No need to create a prototype method if calling
- *  routine is after the compiler has had a chance to create a pionter in the compliation.
+ *  Another way to create a method in a file. No need to create a prototype method if calling
+ *  routine is after the compiler has had a chance to create a pointer in the complilation.
  *
  */
 
@@ -118,12 +118,12 @@ void check_for_error ( int choice ) {
         
         printf ("\n\n\t\tTry something else statment due to unknown error in system.\n\t\tTrying to recover..\n\n");
         
-        release_all (); //release memory
+        release_all ( ); //release memory
         
         do {
             //DELAY for X seconds;
             timer_count = ( clock ( ) + ( CLOCKS_PER_SEC ) ); //timer is per second
-            while ( timer_count > clock() ) {
+            while ( timer_count > clock( ) ) {
             };
             
             // print out a timer to let user know status. Notice the "timer_count" output and how it counts to
@@ -140,7 +140,7 @@ void check_for_error ( int choice ) {
 }
 
 /*
- * Will get an implicite error if prototype function declariation is not before the calling method
+ * Will get an implicit error if prototype function declariation is not before the calling method
  *
  * left here to demostrate where in other code it could cause issues if not having a prtotype function
  **/
@@ -230,13 +230,13 @@ void menu_actions ( int replay ) {
         }
             
         case 8: {
-            printf( "Demonstrate an exteranl gloabal varialbe being changed by code:\n\n\tBefore change: %f", exx);
+            printf( "Demonstrate an exteranl global varialbe being changed by code:\n\n\tBefore change: %f", exx);
             
             exx = 22.55;
             
-            printf( "\n\t\tChanged external gloabal varialbe to: %f", exx);
+            printf( "\n\t\tChanged external global varialbe to: %f", exx);
             
-            printf( "\n\t\t\tChanged to format external gloabal varialbe to: %0.3f", exx);
+            printf( "\n\t\t\tChanged to format external global varialbe to: %0.3f", exx);
         }
     }
 }
