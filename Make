@@ -1,3 +1,4 @@
 #!/bin/bash
 
+FILE=This-is-a-Test
 
